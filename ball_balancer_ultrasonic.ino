@@ -1,5 +1,4 @@
 #include <Servo.h>  
-#include <PID_v1.h>
 int servoPin = 6;
 Servo servo;  
 int angle = 0;   // servo position in degrees 
@@ -29,36 +28,36 @@ void ultrasonic(){
   pinMode(echoPin, INPUT);
   t1 = pulseIn(echoPin, HIGH);
   cm1 = (t1/2) / 29.1;     // Divide by 29.1 or multiply by 0.0343
-  Serial.print(cm1);
-  Serial.println();
-  delay(100);
+//  Serial.print(cm1);
+//  Serial.println();
+  delay(40);
 }
 //void loop() { 
-// servo.write(85);
+// servo.write(79);
 //    }
 void loop(){ 
-  servo.write(86);
-//  ultrasonic(); 
-//  if(cm1 > 16){
-//    for (int i = 0; i < 16; i++){     
-//      if(90 + 3*i <96){
-//      servo.write(90+3*i);
-//      Serial.print("distance in cm: ");Serial.print(cm1);
-//      Serial.print(" angle:");Serial.println(90+3*i);
-//      delay(100);
-//      }
-//    }
+//  if (cm1 >= 16 && cm1 <= 17){
+//    servo.write(86);
 //  }
-//  else if(cm1 < 16){
-//    for (int i = 0; i < 16; i++){     
-//      if (90 - 3*i <86){
-//      servo.write(90-3*i); Serial.print(cm1);
-//      Serial.print(" angle:");Serial.println(90-3*i);
-//      delay(100);
-//      }
-//    }
-//  }
-//  else{
-//    delay(100);  
-//  }
+ultrasonic(); 
+if(cm1 >= 37){
+  cm1 = 2;
+  }
+//else if ((cm1-cm2) > 1 || (cm1-cm2) < -1 ){
+  else if(cm1 > 19 && cm1 < 36){
+    servo.write(90);
+    delay(100);
+    servo.write(86);  
+    Serial.println("more than 16");
+  }
+  else if(cm1 <= 17 && cm1 >= 1){
+    servo.write(64);
+    delay(100);
+    servo.write(86);
+    Serial.println("less than 16");
+  }
+else{servo.write(86);}
+//}
+Serial.println(cm1);
+cm2 = cm1;
 }
