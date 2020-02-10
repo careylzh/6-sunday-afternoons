@@ -3,4 +3,6 @@
 
 PID code modified on our system is by: https://forum.arduino.cc/index.php?topic=361457.0
 
+Did not use PID concept in the end. 
+
 Collaborators: Peh Long Quan, Carey Lai
