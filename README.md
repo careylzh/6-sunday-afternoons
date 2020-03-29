@@ -1,5 +1,5 @@
 # Arduino Automated Ultrasonic Ball Balancer
-6-sunday-afternoons, corrugated board, recycled blue foam, safety pins, paper faster, arduino UNO R3, duct tape. Difficulty was in optimising the physical setup and calibrating the motor.
+6-sunday-afternoons, corrugated board, recycled blue foam, safety pins, paper fastener, arduino UNO R3, duct tape. Difficulty was in optimising the physical setup and calibrating the motor.
 
 ![Demo of Automatic Ball Balancer](https://github.com/careylzh/6-sunday-afternoons/blob/master/six-sunday-afternoons.gif)
 
